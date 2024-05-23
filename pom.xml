@@ -36,7 +36,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>docker-test-app</finalName>
+		<finalName>spring-boot-k8s</finalName>
 	</build>
 
 </project>

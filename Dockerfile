@@ -1,4 +1,4 @@
 FROM openjdk
-EXPOSE 8080
-ADD target/docker-test-app.jar docker-test-app.jar
-ENTRYPOINT [ "java", "-jar", "/docker-test-app.jar" ]
+EXPOSE 8000
+ADD target/spring-boot-k8s.jar spring-boot-k8s.jar
+ENTRYPOINT [ "java", "-jar", "/spring-boot-k8s.jar" ]

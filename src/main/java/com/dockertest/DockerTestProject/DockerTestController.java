@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DockerTestController {
-    @RequestMapping("/message")
+    @RequestMapping("/")
     public Map<String, Object> getValues() {
         Map<String, Object> data = new HashMap<>();
         data.put("message", "SpringBoot dockerization test");
         data.put("technologies", Arrays.asList("Java", "SpringBoot", "Docker"));
         data.put("devCode", 1234);
-        data.put("developer", "Agniswar Das");
+        data.put("developer", "Agniswar");
+        data.put("task", "implemented k8s");
         return data;
     }
 }
