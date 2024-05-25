@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: m1-k8s
+spec:
+  replicas: 3  # Number of pods to run
+  selector:
+    matchLabels:
+      app: spring-boot-k8s 
+  template:
+    metadata:
+      labels:
+        app: spring-boot-k8s
+    spec:
+      containers:
+      - name: m1-k8s
+        image: agnisauras/spring-boot-k8s:v1
+        ports:
+        - containerPort: 8000
+        resources: # Optional resource limits
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
