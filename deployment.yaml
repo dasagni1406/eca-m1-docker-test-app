@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: m1-k8s
 spec:
-  replicas: 3  # Number of pods to run
+  replicas: 3
   selector:
     matchLabels:
       app: spring-boot-k8s 
